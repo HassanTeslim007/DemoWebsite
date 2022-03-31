@@ -1,0 +1,421 @@
+  * {
+      border: 0;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  
+    
+    body {
+      background: rgb(243, 240, 240) url(http://lorempixel.com/1920/1080/nature/);
+      font-family: Lato, Helvetica, Arial, sans-serif;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    
+    /*======================================================
+                              Navbar
+      ======================================================*/
+    #navbar {
+      background: white;
+      color: rgb(13, 26, 38);
+      position: fixed;
+      top: 0;
+      height: 80px;
+      line-height: 60px;
+      width: 100vw;
+      z-index: 10;
+    }
+    
+    .nav-wrapper {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+    } @media(max-width: 768px) {
+        .nav-wrapper {
+          width: 90%;
+        }
+      } @media(max-width: 638px) {
+          .nav-wrapper {
+            width: 100%;
+          }
+        } 
+    
+    
+    .logo {
+      float: left;
+      font-size: 1.5em;
+      margin-left: 0px;
+      height: 60px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    } @media(max-width: 768px) {
+      }
+    
+    #navbar ul {
+      display: inline-block;
+      list-style: none;
+      margin-right: -200px;
+      margin-top: -2px;
+      text-align: right;
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+    } @media(max-width: 640px) {
+        #navbar ul {
+          display: none;
+        }
+      } @media(orientation: landscape) {
+          #navbar ul {
+            display: inline-block;
+          }
+        }
+    
+    #navbar li {
+      display: inline-block;
+    }
+    
+    #navbar li a {
+      color: rgb(13, 26, 38);
+      display: block;
+      font-size:1 em;
+      height: 50px;
+      letter-spacing: 1px;
+      margin: 0 10px; 
+      padding: 0 5px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+    
+    #navbar li a:hover {
+      /* border-bottom: 1px solid rgb(28, 121, 184); */
+      color: rgb(28, 121, 184);
+      transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+    }
+    
+    /* Animated Bottom Line */
+    #navbar li a:before, #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      background: rgb(1, 11, 20);
+    }
+    
+    #navbar li a:before {
+      left: 0;
+      transition: 0.5s;
+    }
+    
+    #navbar li a:after {
+      background: rgb(13, 26, 38);
+      right: 0;
+    }
+    
+    #navbar li a:hover:before {
+      background: rgb(13, 26, 38);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+    }
+    
+    #navbar li a:hover:after {
+      background: transparent;
+      width: 100%;
+      /* transition: 0s; */
+    }
+  
+      /*======================================================
+                       Body - Banner 
+      ======================================================*/
+      .banner {
+          text-align: center;
+          height: 400px;
+          padding: 100px;
+        }
+  
+      .title {
+          font-size: 400%; 
+          line-height: 1.5;
+          font-weight: 400;
+      }
+      .subtitle {
+          font-size: 150%; 
+          padding: 50px;
+         line-height: 1.5;
+     }
+     
+     
+      /*======================================================
+                       Body - Grid
+      ======================================================*/
+      .grid_wrapper{
+          height: fit-content;
+      }
+    
+      .article{
+          float: left;
+          width: 45%;
+          margin: 35px;
+          padding: 0;
+      }
+     
+
+      p.heading{
+        font-size: 20px;
+        font-weight: 700;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    p.sub{
+        font-size: 20px;
+        padding: 0;
+        margin: 5px 0;
+    }
+
+      img{
+         object-fit: cover;
+         max-width: 100%;
+         width: 100%;
+      }
+      button {
+        background-color: #4d3005;
+        color: white;
+        padding: 15px 32px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+        position: relative;
+        align-self: center;
+        margin-left: -50px;
+    }
+      
+    button:hover {
+        background-color: rgb(231, 227, 216);
+        color: #4d3005;
+      }
+
+ /*======================================================
+                       Body - Shop Ad
+      ======================================================*/
+    
+    .shop {
+        height: 300px;
+        background-color: linear-gradient(#113a5d,#dbd7cb);
+        margin-top: 80px;
+    }
+
+    .shop_item_description{
+        margin: 40px 30px;
+        height: 300px;
+        width: 50%;
+        float: left;
+    }
+
+    .shop_image{
+        height: 300px;
+        margin-top: -100;
+        width: 40%;
+        border: solid rgb(116, 53, 2);
+        float: right;
+    }
+
+    .shop_title{
+        font-size: 2.5em;
+        font-weight: 700;
+        text-align: left;
+        color: #4d3005;
+    }
+
+    .shop_subtitle{
+        font-size: 1.5em;
+        color: #4d3005;
+        font-weight: 700;
+    }
+
+    .shop_button {
+        background-color: #412804;
+        color: white;
+        padding: 15px 32px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+        margin-left: 0px;
+    }
+      
+    .shop_button:hover {
+        background-color: rgb(231, 227, 216);
+        color: #4d3005;
+      }
+
+       /*======================================================
+                       Footer
+      ======================================================*/
+
+      .footer-distributed {
+        background-color: #466060;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        font: bold 16px sans-serif;
+      
+        padding: 55px 50px;
+        margin-top: 80px;
+      }
+      
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right {
+        display: inline-block;
+        vertical-align: top;
+      }
+      
+      /* Footer left */
+      
+      .footer-distributed .footer-left {
+        width: 40%;
+      }
+      
+      
+      .footer-distributed h3 span {
+        color: #5383d3;
+      }
+      
+      /* Footer links */
+      
+      .footer-distributed .footer-links {
+        color: #ffffff;
+        margin: 20px 0 12px;
+        padding: 0;
+      }
+      
+      .footer-distributed .footer-links a {
+        display: inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      .footer-distributed .footer-company-name {
+        color: #8f9296;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+      }
+      
+      /* Footer Center */
+      
+      .footer-distributed .footer-center {
+        width: 35%;
+      }
+      
+      .footer-distributed .footer-center i {
+        background-color: #33383b;
+        color: #ffffff;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+      }
+      
+      .footer-distributed .footer-center i.fa-envelope {
+        font-size: 17px;
+        line-height: 38px;
+      }
+      
+      .footer-distributed .footer-center p {
+        display: inline-block;
+        color: #ffffff;
+        vertical-align: middle;
+        margin: 0;
+      }
+      
+      .footer-distributed .footer-center p span {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 2;
+      }
+      
+      .footer-distributed .footer-center p a {
+        color: #5383d3;
+        text-decoration: none;
+      }
+      
+      /* Footer Right */
+      
+      .footer-distributed .footer-right {
+        width: 20%;
+      }
+      
+      .footer-distributed .footer-company-about {
+        line-height: 20px;
+        color: #92999f;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+      }
+      
+      .footer-distributed .footer-company-about span {
+        display: block;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      
+      .footer-distributed .footer-icons {
+        margin-top: 25px;
+      }
+      
+      .footer-distributed .footer-icons a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background-color: #33383b;
+        border-radius: 2px;
+      
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+      
+        margin-right: 3px;
+        margin-bottom: 5px;
+      }
+      
+      /* If you don't want the footer to be responsive, remove these media queries */
+      
+      @media (max-width: 880px) {
+        .footer-distributed {
+          font: bold 14px sans-serif;
+        }
+      
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+          display: block;
+          width: 100%;
+          margin-bottom: 40px;
+          text-align: center;
+        }
+      
+        .footer-distributed .footer-center i {
+          margin-left: 0;
+        }
+      }
+      
